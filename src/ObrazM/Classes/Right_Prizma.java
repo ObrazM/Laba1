@@ -10,8 +10,19 @@ public class Right_Prizma extends Right_Triangle {
         super(length);
         this.setHigh(high);
     }
-    public void setHigh(int high) {
-        this.high = high > 0 ? high : 0;
+  public void setHigh(int high) {
+        if (high > 0){ this.high=high;}
+        else{
+            System.out.println("Error, set high > 0");
+            this.high = 0;
+        }
+    }
+    public void setLength(int length) {
+        if (length > 0){ this.length=length;}
+        else{
+            System.out.println("Error, set length > 0");
+            this.length = 0;
+        }
     }
 
     public int getHigh() {
