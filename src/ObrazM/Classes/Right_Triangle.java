@@ -6,11 +6,15 @@ public class Right_Triangle {
     public Right_Triangle() {
     }
 
-    public Right_Triangle(int length) {  // функция, проверяет на неотрицательность
+    public Right_Triangle(int length) { 
         this.setLength(length);
     }
     public void setLength(int length) {
-        this.length = length > 0 ? length : 0;
+        if (length > 0){ this.length=length;}
+        else{
+            System.out.println("Error, set length > 0");
+            this.length = 0;
+        }
     }
 
     public int getLength(int length) {
